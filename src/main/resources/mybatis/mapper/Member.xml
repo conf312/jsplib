@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jsplib.users.member.dao.MemberMapper">
+    <insert id="insertMember" parameterType="com.jsplib.users.member.dto.MemberSignupRequestDto">
+        insert into
+        member (
+            name,
+            email,
+            password,
+            register_time
+        )
+        values (
+            #{name},
+            #{email},
+            #{password},
+            NOW()
+        )
+    </insert>
+</mapper>
