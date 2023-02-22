@@ -17,4 +17,31 @@
             NOW()
         )
     </insert>
+
+    <select id="selectMember" parameterType="java.lang.String" resultType="com.jsplib.users.member.dto.MemberResponseDto">
+        select
+            idx,
+            name,
+            email,
+            password,
+            register_time
+        from
+            member
+        where
+            email = #{email}
+    </select>
+
+    <update id="updatePassword" parameterType="com.jsplib.users.member.dto.MemberSignupRequestDto">
+        update member
+        set
+            password = #{password}
+        where
+            email = #{email}
+    </update>
+
+    <delete id="deleteMember" parameterType="java.lang.String">
+        delete from member
+        where
+            email = #{email}
+    </delete>
 </mapper>
