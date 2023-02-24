@@ -24,6 +24,7 @@ public class AuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
         log.info("==> onAuthenticationSuccess");
+        response.sendRedirect("/book/list");
 //        Member.Response member = (Member.Response) authentication.getPrincipal();
 //
 //        if (member.getLoginFailCount() > 4) {

@@ -42,19 +42,19 @@
                 Start creating the best possible user experience for you
                 customers.
               </p>
-              <form action="#">
+              <form action="/member/signin/action" method="post">
                 <div class="row">
                   <div class="col-12">
                     <div class="input-style-1">
                       <label>Email</label>
-                      <input type="email" placeholder="Email" />
+                      <input type="email" name="email" placeholder="Email" />
                     </div>
                   </div>
                   <!-- end col -->
                   <div class="col-12">
                     <div class="input-style-1">
                       <label>Password</label>
-                      <input type="password" placeholder="Password" />
+                      <input type="password" name="password" placeholder="Password" />
                     </div>
                   </div>
                   <!-- end col -->
@@ -63,28 +63,18 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
-                        id="checkbox-remember"
-                      />
+                        name="remember-me"
+                        id="remember-me"/>
                       <label
                         class="form-check-label"
-                        for="checkbox-remember"
-                      >
-                        Remember me next time</label
-                      >
+                        for="remember-me">
+                        Remember me next time</label>
                     </div>
                   </div>
                   <!-- end col -->
                   <div class="col-xxl-6 col-lg-12 col-md-6">
-                    <div
-                      class="
-                        text-start text-md-end text-lg-start text-xxl-end
-                        mb-30
-                      "
-                    >
-                      <a href="#0" class="hover-underline"
-                        >Forgot Password?</a
-                      >
+                    <div class="text-start text-md-end text-lg-start text-xxl-end mb-30">
+                      <a href="#0" class="hover-underline">Forgot Password?</a>
                     </div>
                   </div>
                   <!-- end col -->
@@ -138,7 +128,7 @@
                 </div>
                 <p class="text-sm text-medium text-dark text-center">
                   Don’t have any account yet?
-                  <a href="signup.html">Create an account</a>
+                  <a href="/member/signup">Create an account</a>
                 </p>
               </div>
             </div>
@@ -150,4 +140,10 @@
     </div>
   </section>
 </body>
+<script>
+  let msg = "${param.msg}";
+  if (msg) {
+    alert(msg);
+  }
+</script>
 </html>

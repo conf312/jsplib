@@ -39,7 +39,7 @@ public class AuthFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
         //memberService.updateLoginFailCount(email);
 
-        setDefaultFailureUrl("/member/public/login?msg=" + msg + "&email=" + email);
+        setDefaultFailureUrl("/member/signin?msg=" + msg + "&email=" + email);
         super.onAuthenticationFailure(request, response, exception);
     }
 }

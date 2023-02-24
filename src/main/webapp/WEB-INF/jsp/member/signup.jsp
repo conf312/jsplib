@@ -77,10 +77,7 @@
                       />
                       <label
                         class="form-check-label"
-                        for="checkbox-not-robot"
-                      >
-                        I'm not robot</label
-                      >
+                        for="checkbox-not-robot">I'm not robot</label>
                     </div>
                   </div>
                   <!-- end col -->
@@ -133,7 +130,7 @@
                   </button>
                 </div>
                 <p class="text-sm text-medium text-dark text-center">
-                  Already have an account? <a href="signin.html">Sign In</a>
+                  Already have an account? <a href="/member/signin">Sign In</a>
                 </p>
               </div>
             </div>
